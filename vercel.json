@@ -1,0 +1,45 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "services": {
+    "luxurystay_hospitality_backend": {
+      "root": "LuxuryStay_Hospitality_backend",
+      "framework": "express"
+    },
+    "luxurystay_hospitality_frontend": {
+      "root": "LuxuryStay_Hospitality_frontend",
+      "framework": "vite"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api",
+      "destination": {
+        "service": "luxurystay_hospitality_backend"
+      }
+    },
+    {
+      "source": "/api/(.*)",
+      "destination": {
+        "service": "luxurystay_hospitality_backend"
+      }
+    },
+    {
+      "source": "/uploads/(.*)",
+      "destination": {
+        "service": "luxurystay_hospitality_backend"
+      }
+    },
+    {
+      "source": "/health",
+      "destination": {
+        "service": "luxurystay_hospitality_backend"
+      }
+    },
+    {
+      "source": "/(.*)",
+      "destination": {
+        "service": "luxurystay_hospitality_frontend"
+      }
+    }
+  ]
+}

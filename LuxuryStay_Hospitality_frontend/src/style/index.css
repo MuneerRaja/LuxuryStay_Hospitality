@@ -1,0 +1,470 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Gilda+Display&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+  html {
+    @apply scroll-smooth scroll-pt-6;
+  }
+
+  /* 
+  🟨🟨🟨🟨🟨🟨🟨🟨🟨
+  Browser Main Scrollbar 
+  🟨🟨🟨🟨🟨🟨🟨🟨🟨
+  */
+
+  html::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  html::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: linear-gradient(180deg, #a37d4c 0%, #c4966a 100%);
+  }
+
+  html::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #8a6840 0%, #a37d4c 100%);
+  }
+
+  html::-webkit-scrollbar-track {
+    background-color: #f7f7f7;
+  }
+
+  body {
+    @apply font-secondary text-primary antialiased;
+  }
+
+  input::placeholder {
+    @apply text-primary/60;
+  }
+
+  /* Premium Selection */
+  ::selection {
+    @apply bg-accent/30 text-primary;
+  }
+
+  /* 
+  🟨🟨🟨🟨🟨🟨🟨🟨🟨
+  Typography
+  🟨🟨🟨🟨🟨🟨🟨🟨🟨
+  */
+
+  .h1 {
+    @apply font-primary text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-wide;
+  }
+
+  .h2 {
+    @apply font-primary text-3xl sm:text-4xl md:text-[45px] mb-4;
+  }
+
+  .h3 {
+    @apply text-xl sm:text-2xl font-primary font-semibold tracking-[1px] mb-2;
+  }
+
+  .h4 {
+    @apply text-lg sm:text-xl font-primary font-medium tracking-wide;
+  }
+
+  /* 
+  🟨🟨🟨🟨🟨🟨🟨🟨🟨
+  Premium Buttons
+  🟨🟨🟨🟨🟨🟨🟨🟨🟨
+  */
+
+  .btn {
+    @apply relative text-[13px] sm:text-[15px] tracking-[2px] sm:tracking-[3px] font-tertiary uppercase text-white flex-1 transition-all duration-300 px-6 sm:px-8 flex justify-center items-center gap-2 overflow-hidden;
+  }
+
+  .btn-sm {
+    @apply h-[44px] sm:h-[48px];
+  }
+
+  .btn-lg {
+    @apply h-[52px] sm:h-[60px];
+  }
+
+  .btn-primary {
+    @apply bg-gradient-gold bg-[length:200%_100%] hover:bg-[position:right_center] shadow-luxury hover:shadow-luxury-lg;
+  }
+
+  .btn-primary::before {
+    content: '';
+    @apply absolute inset-0 bg-white/0 hover:bg-white/10 transition-all duration-300;
+  }
+
+  .btn-secondary {
+    @apply bg-primary hover:bg-accent shadow-card hover:shadow-card-hover;
+  }
+
+  .btn-white {
+    @apply bg-white text-primary hover:bg-luxury-cream shadow-card hover:shadow-card-hover;
+  }
+
+  .btn-outline {
+    @apply bg-transparent border-2 border-accent text-accent hover:bg-accent hover:text-white;
+  }
+
+  .btn-outline-white {
+    @apply bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary;
+  }
+
+  /* 
+  🟨🟨🟨🟨🟨🟨🟨🟨🟨
+  Premium Cards
+  🟨🟨🟨🟨🟨🟨🟨🟨🟨
+  */
+
+  .card {
+    @apply bg-white rounded-lg shadow-card hover:shadow-card-hover transition-all duration-400 overflow-hidden;
+  }
+
+  .card-luxury {
+    @apply bg-white rounded-xl shadow-luxury hover:shadow-luxury-lg transition-all duration-400 overflow-hidden border border-accent/10;
+  }
+
+  .card-premium {
+    @apply bg-white rounded-2xl shadow-card hover:shadow-premium transition-all duration-500 overflow-hidden;
+  }
+
+  /* 
+  🟨🟨🟨🟨🟨🟨🟨🟨🟨
+  Premium Inputs
+  🟨🟨🟨🟨🟨🟨🟨🟨🟨
+  */
+
+  .input {
+    @apply w-full px-4 py-3 bg-white border border-gray-200 rounded-lg text-primary placeholder:text-primary/50 transition-all duration-300 focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20;
+  }
+
+  .input-luxury {
+    @apply w-full px-4 py-3 bg-luxury-cream/50 border border-accent/20 rounded-lg text-primary placeholder:text-primary/50 transition-all duration-300 focus:outline-none focus:border-accent focus:bg-white focus:ring-2 focus:ring-accent/20;
+  }
+
+  .input-premium {
+    @apply w-full px-4 py-3 bg-white border-2 border-gray-100 rounded-xl text-primary placeholder:text-primary/50 transition-all duration-300 focus:outline-none focus:border-accent focus:ring-4 focus:ring-accent/10 shadow-sm focus:shadow-luxury;
+  }
+
+  /* 
+  🟨🟨🟨🟨🟨🟨🟨🟨🟨
+  Premium Labels
+  🟨🟨🟨🟨🟨🟨🟨🟨🟨
+  */
+
+  .label {
+    @apply block text-sm font-medium text-gray-700 mb-2;
+  }
+
+  .label-luxury {
+    @apply block text-sm font-medium text-primary/80 mb-2 tracking-wide uppercase;
+  }
+
+  /* 
+  🟨🟨🟨🟨🟨🟨🟨🟨🟨
+  Section Spacing
+  🟨🟨🟨🟨🟨🟨🟨🟨🟨
+  */
+
+  .section {
+    @apply py-16 md:py-20 lg:py-24;
+  }
+
+  .section-sm {
+    @apply py-10 md:py-14 lg:py-16;
+  }
+
+  /* 
+  🟨🟨🟨🟨🟨🟨🟨🟨🟨
+  Premium Badge
+  🟨🟨🟨🟨🟨🟨🟨🟨🟨
+  */
+
+  .badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium;
+  }
+
+  .badge-accent {
+    @apply bg-accent/10 text-accent;
+  }
+
+  .badge-success {
+    @apply bg-green-100 text-green-800;
+  }
+
+  .badge-warning {
+    @apply bg-yellow-100 text-yellow-800;
+  }
+
+  .badge-error {
+    @apply bg-red-100 text-red-800;
+  }
+
+  /* 
+  🟨🟨🟨🟨🟨🟨🟨🟨🟨
+  Premium Divider
+  🟨🟨🟨🟨🟨🟨🟨🟨🟨
+  */
+
+  .divider {
+    @apply w-16 h-0.5 bg-accent mx-auto;
+  }
+
+  .divider-gold {
+    @apply w-20 h-1 bg-gradient-gold rounded-full mx-auto;
+  }
+
+  /* 
+  🟨🟨🟨🟨🟨🟨🟨🟨🟨
+  Premium Overlay
+  🟨🟨🟨🟨🟨🟨🟨🟨🟨
+  */
+
+  .overlay {
+    @apply absolute inset-0 bg-black/50;
+  }
+
+  .overlay-dark {
+    @apply absolute inset-0 bg-black/70;
+  }
+
+  .overlay-gradient {
+    @apply absolute inset-0 bg-gradient-premium;
+  }
+
+  /* 
+  🟨🟨🟨🟨🟨🟨🟨🟨🟨
+  Premium Link Styles
+  🟨🟨🟨🟨🟨🟨🟨🟨🟨
+  */
+
+  .link {
+    @apply text-accent hover:text-accent-dark transition-colors duration-300;
+  }
+
+  .link-underline {
+    @apply text-accent hover:text-accent-dark transition-all duration-300 relative;
+  }
+
+  .link-underline::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300;
+  }
+
+  .link-underline:hover::after {
+    @apply w-full;
+  }
+}
+
+@layer components {
+  /* 
+  🟨🟨🟨🟨🟨🟨🟨🟨🟨
+  Premium Form Container
+  🟨🟨🟨🟨🟨🟨🟨🟨🟨
+  */
+
+  .form-container {
+    @apply bg-white rounded-2xl shadow-luxury p-6 sm:p-8 md:p-10;
+  }
+
+  /* 
+  🟨🟨🟨🟨🟨🟨🟨🟨🟨
+  Premium Stat Card
+  🟨🟨🟨🟨🟨🟨🟨🟨🟨
+  */
+
+  .stat-card {
+    @apply bg-white p-5 sm:p-6 rounded-xl shadow-card hover:shadow-luxury transition-all duration-400 border border-gray-100;
+  }
+
+  /* 
+  🟨🟨🟨🟨🟨🟨🟨🟨🟨
+  Premium Table
+  🟨🟨🟨🟨🟨🟨🟨🟨🟨
+  */
+
+  .table-container {
+    @apply overflow-x-auto rounded-xl border border-gray-100 shadow-card;
+  }
+
+  .table-premium {
+    @apply min-w-full divide-y divide-gray-100;
+  }
+
+  .table-premium thead {
+    @apply bg-gray-50;
+  }
+
+  .table-premium th {
+    @apply px-4 sm:px-6 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider;
+  }
+
+  .table-premium tbody {
+    @apply bg-white divide-y divide-gray-100;
+  }
+
+  .table-premium td {
+    @apply px-4 sm:px-6 py-4 whitespace-nowrap text-sm text-gray-700;
+  }
+
+  .table-premium tbody tr {
+    @apply hover:bg-gray-50/50 transition-colors duration-200;
+  }
+
+  /* 
+  🟨🟨🟨🟨🟨🟨🟨🟨🟨
+  Premium Hero Section
+  🟨🟨🟨🟨🟨🟨🟨🟨🟨
+  */
+
+  .hero-section {
+    @apply relative h-[50vh] sm:h-[60vh] lg:h-[70vh] min-h-[400px] flex items-center justify-center overflow-hidden;
+  }
+
+  .hero-content {
+    @apply relative z-10 text-center px-4 max-w-4xl mx-auto;
+  }
+
+  .hero-title {
+    @apply font-primary text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white tracking-wide mb-4 animate-fade-in-down;
+  }
+
+  .hero-subtitle {
+    @apply font-tertiary text-sm sm:text-base md:text-lg text-white/80 tracking-[4px] sm:tracking-[6px] uppercase mb-6 animate-fade-in-up;
+  }
+
+  /* 
+  🟨🟨🟨🟨🟨🟨🟨🟨🟨
+  Premium Navigation
+  🟨🟨🟨🟨🟨🟨🟨🟨🟨
+  */
+
+  .nav-link {
+    @apply relative text-sm sm:text-[15px] tracking-[2px] sm:tracking-[3px] font-tertiary uppercase transition-colors duration-300;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  /* 
+  🟨🟨🟨🟨🟨🟨🟨🟨🟨
+  Premium Image Container
+  🟨🟨🟨🟨🟨🟨🟨🟨🟨
+  */
+
+  .img-container {
+    @apply relative overflow-hidden;
+  }
+
+  .img-container img {
+    @apply w-full h-full object-cover transition-transform duration-500;
+  }
+
+  .img-container:hover img {
+    @apply scale-110;
+  }
+
+  /* 
+  🟨🟨🟨🟨🟨🟨🟨🟨🟨
+  Premium Gradient Text
+  🟨🟨🟨🟨🟨🟨🟨🟨🟨
+  */
+
+  .text-gradient {
+    @apply bg-gradient-gold bg-clip-text text-transparent;
+  }
+
+  /* 
+  🟨🟨🟨🟨🟨🟨🟨🟨🟨
+  Premium Loading Spinner
+  🟨🟨🟨🟨🟨🟨🟨🟨🟨
+  */
+
+  .spinner {
+    @apply w-8 h-8 border-4 border-accent/20 border-t-accent rounded-full animate-spin;
+  }
+
+  /* 
+  🟨🟨🟨🟨🟨🟨🟨🟨🟨
+  Premium Mobile Menu
+  🟨🟨🟨🟨🟨🟨🟨🟨🟨
+  */
+
+  .mobile-menu {
+    @apply fixed inset-y-0 right-0 w-full max-w-sm bg-white shadow-premium z-50 transform transition-transform duration-300;
+  }
+
+  .mobile-menu-overlay {
+    @apply fixed inset-0 bg-black/50 z-40 transition-opacity duration-300;
+  }
+}
+
+@layer utilities {
+  /* 
+  🟨🟨🟨🟨🟨🟨🟨🟨🟨
+  Premium Utilities
+  🟨🟨🟨🟨🟨🟨🟨🟨🟨
+  */
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .backdrop-blur-luxury {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Premium focus ring */
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2;
+  }
+
+  /* Premium hover lift effect */
+  .hover-lift {
+    @apply transition-transform duration-300 hover:-translate-y-1;
+  }
+
+  /* Premium hover glow effect */
+  .hover-glow {
+    @apply transition-shadow duration-300 hover:shadow-luxury-lg;
+  }
+
+  /* Line clamp utilities */
+  .line-clamp-1 {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}

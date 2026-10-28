@@ -1,0 +1,146 @@
+module.exports = {
+  content: ['./src/**/*.{js,jsx,ts,tsx}'],
+  theme: {
+    fontFamily: {
+      primary: ['Gilda Display', 'serif'],
+      secondary: ['Barlow', 'sans-serif'],
+      tertiary: ['Barlow Condensed', 'sans-serif'],
+    },
+    container: {
+      padding: {
+        DEFAULT: '15px',
+        sm: '20px',
+        md: '25px',
+        lg: '30px',
+      },
+    },
+    screens: {
+      xs: '475px',
+      sm: '640px',
+      md: '768px',
+      lg: '960px',
+      xl: '1140px',
+      '2xl': '1320px',
+    },
+    extend: {
+      colors: {
+        primary: {
+          DEFAULT: '#0a0a0a',
+          50: '#f7f7f7',
+          100: '#e3e3e3',
+          200: '#c8c8c8',
+          300: '#a4a4a4',
+          400: '#818181',
+          500: '#666666',
+          600: '#515151',
+          700: '#434343',
+          800: '#383838',
+          900: '#0a0a0a',
+        },
+        accent: {
+          DEFAULT: '#a37d4c',
+          50: '#faf6f1',
+          100: '#f2e8db',
+          200: '#e4d0b9',
+          300: '#d4b391',
+          400: '#c4966a',
+          500: '#a37d4c',
+          600: '#8a6840',
+          700: '#6b5032',
+          800: '#4d3a24',
+          900: '#2f2215',
+          hover: '#8a6840',
+          light: '#c4966a',
+          dark: '#6b5032',
+        },
+        luxury: {
+          cream: '#faf8f5',
+          ivory: '#fffff0',
+          champagne: '#f7e7ce',
+          gold: '#d4af37',
+          bronze: '#cd7f32',
+          charcoal: '#36454f',
+          slate: '#708090',
+        },
+      },
+      backgroundImage: {
+        room: "url('/src/assets/img/room.jpg')",
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-luxury': 'linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%)',
+        'gradient-gold': 'linear-gradient(135deg, #a37d4c 0%, #c4966a 50%, #a37d4c 100%)',
+        'gradient-premium': 'linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%)',
+      },
+      boxShadow: {
+        'luxury': '0 4px 20px -2px rgba(163, 125, 76, 0.15)',
+        'luxury-lg': '0 10px 40px -3px rgba(163, 125, 76, 0.2)',
+        'luxury-xl': '0 20px 60px -5px rgba(163, 125, 76, 0.25)',
+        'card': '0 2px 15px rgba(0, 0, 0, 0.08)',
+        'card-hover': '0 8px 30px rgba(0, 0, 0, 0.12)',
+        'premium': '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
+      },
+      animation: {
+        'fade-in': 'fadeIn 0.5s ease-in-out',
+        'fade-in-up': 'fadeInUp 0.6s ease-out',
+        'fade-in-down': 'fadeInDown 0.6s ease-out',
+        'slide-in-left': 'slideInLeft 0.4s ease-out',
+        'slide-in-right': 'slideInRight 0.4s ease-out',
+        'scale-in': 'scaleIn 0.3s ease-out',
+        'shimmer': 'shimmer 2s linear infinite',
+        'float': 'float 3s ease-in-out infinite',
+        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        fadeInUp: {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        fadeInDown: {
+          '0%': { opacity: '0', transform: 'translateY(-20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        slideInLeft: {
+          '0%': { opacity: '0', transform: 'translateX(-20px)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
+        },
+        slideInRight: {
+          '0%': { opacity: '0', transform: 'translateX(20px)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
+        },
+        scaleIn: {
+          '0%': { opacity: '0', transform: 'scale(0.95)' },
+          '100%': { opacity: '1', transform: 'scale(1)' },
+        },
+        shimmer: {
+          '0%': { backgroundPosition: '-200% 0' },
+          '100%': { backgroundPosition: '200% 0' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+        },
+      },
+      borderRadius: {
+        '4xl': '2rem',
+        '5xl': '2.5rem',
+      },
+      spacing: {
+        '18': '4.5rem',
+        '88': '22rem',
+        '100': '25rem',
+        '120': '30rem',
+      },
+      transitionDuration: {
+        '400': '400ms',
+        '600': '600ms',
+      },
+      transitionTimingFunction: {
+        'luxury': 'cubic-bezier(0.4, 0, 0.2, 1)',
+      },
+    },
+  },
+  plugins: [],
+};
